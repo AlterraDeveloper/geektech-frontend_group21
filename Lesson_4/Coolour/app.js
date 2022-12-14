@@ -46,9 +46,12 @@ function clickHandler(event) {
       navigator.clipboard.writeText(eventTarget.innerText);
       var popupNode = document.querySelector(".popup");
       console.log(event);
-      popupNode.style.display = "flex";
-      popupNode.style.top = (event.pageX + 5).toString() + "px";
-      popupNode.style.left = (event.pageY + 5).toString() + "px";
+
+      Object.assign(popupNode.style, {
+        left: (event.clientX + window.scrollX - 125).toString() + "px",
+        top: (event.clientY + window.scrollY + 10).toString() + "px",
+        display: `flex`,
+      });
 
       setTimeout(function () {
         popupNode.style.display = "none";
