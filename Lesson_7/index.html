@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="lookup">
+      <form>
+        <input class="iin" type="search" autofocus="" />
+        <p>Enter the first digits of a card number (BIN/IIN)</p>
+      </form>
+      <ul class="result">
+        <li class="scheme">
+          <h2>Scheme / network</h2>
+          <p class="any"></p>
+        </li>
+        <li class="brand">
+          <h2>Brand</h2>
+          <p class="any"></p>
+        </li>
+        <li class="number">
+          <h2>Card number</h2>
+          <ul>
+            <li class="length">
+              <h3>Length</h3>
+              <p class="any"></p>
+            </li>
+            <li class="luhn">
+              <h3>LUHN</h3>
+              <ol>
+                <li class="yes">Yes</li>
+                <li class="no">No</li>
+              </ol>
+            </li>
+          </ul>
+        </li>
+        <li class="type">
+          <h2>Type</h2>
+          <ol>
+            <li class="" data-value="debit">Debit</li>
+            <li data-value="credit">Credit</li>
+          </ol>
+        </li>
+        <li class="prepaid">
+          <h2>Prepaid</h2>
+          <ol>
+            <li class="yes">Yes</li>
+            <li class="no">No</li>
+          </ol>
+        </li>
+        <li class="country">
+          <h2>Country</h2>
+          <p class="name any"></p>
+          <p class="geo">
+            (latitude: <span class="latitude any"></span>, longitude:
+            <span class="longitude any"></span>)
+          </p>
+        </li>
+        <li class="bank">
+          <h2>Bank</h2>
+          <p class="name any"></p>
+          <p class="url any"><a href=""></a></p>
+          <p class="phone any"></p>
+        </li>
+      </ul>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
